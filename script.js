@@ -2,13 +2,13 @@
 document.querySelectorAll('[data-card]').forEach((card) => {
   card.addEventListener('click', (e) => {
     if (e.target.closest('a')) return;
-    if (e.target.closest('.rail__nav')) return;
+    if (e.target.closest('.ott-rail__nav')) return;
     if (card.hasAttribute('aria-hidden')) return;
-    const wasOpen = card.classList.contains('is-open');
-    card.classList.toggle('is-open');
+    const wasOpen = card.classList.contains('ott-is-open');
+    card.classList.toggle('ott-is-open');
 
     if (!wasOpen && window.amplitude) {
-      const title = card.querySelector('.card__title');
+      const title = card.querySelector('.ott-card__title');
       window.amplitude.track('programming_card_expanded', {
         zone: title ? title.textContent.trim() : 'unknown'
       });
@@ -21,10 +21,10 @@ document.querySelectorAll('[data-card]').forEach((card) => {
 // reaches the end of the original set, we silently jump scroll position
 // back to the start of the duplicate set, giving an infinite-loop feel.
 document.querySelectorAll('[data-rail]').forEach((rail) => {
-  const viewport = rail.querySelector('.rail__viewport');
-  const track = rail.querySelector('.rail__track');
-  const prevBtn = rail.querySelector('.rail__nav--prev');
-  const nextBtn = rail.querySelector('.rail__nav--next');
+  const viewport = rail.querySelector('.ott-rail__viewport');
+  const track = rail.querySelector('.ott-rail__track');
+  const prevBtn = rail.querySelector('.ott-rail__nav--prev');
+  const nextBtn = rail.querySelector('.ott-rail__nav--next');
   if (!viewport || !track) return;
 
   // Clone all cards once to enable seamless looping. Clones are marked
@@ -48,7 +48,7 @@ document.querySelectorAll('[data-rail]').forEach((rail) => {
   };
 
   const stepSize = () => {
-    const card = track.querySelector('.card--rail');
+    const card = track.querySelector('.ott-card--rail');
     if (!card) return viewport.clientWidth * 0.8;
     const styles = getComputedStyle(track);
     const gap = parseFloat(styles.columnGap || styles.gap || '16') || 0;
@@ -132,7 +132,7 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.partner, .stat, .aud, .vendor').forEach((el) => {
+document.querySelectorAll('.ott-partner, .ott-stat, .ott-aud, .ott-vendor').forEach((el) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(14px)';
   el.style.transition = 'opacity .5s ease, transform .5s ease';
@@ -158,7 +158,7 @@ document.querySelectorAll('.partner, .stat, .aud, .vendor').forEach((el) => {
     el.addEventListener('click', () => {
       const section = el.closest('section');
       track('cta_pre_register_clicked', {
-        location: section ? section.id || 'unknown' : 'nav',
+        location: section ? section.id || 'unknown' : 'ott-nav',
         text: el.textContent.trim()
       });
       metaTrack('Lead', { content_name: 'The Blend Register' });
@@ -166,14 +166,14 @@ document.querySelectorAll('.partner, .stat, .aud, .vendor').forEach((el) => {
   });
 
   // Nav link clicks (which sections people are jumping to)
-  document.querySelectorAll('.nav__links a').forEach((el) => {
+  document.querySelectorAll('.ott-nav__links a').forEach((el) => {
     el.addEventListener('click', () => {
       track('nav_link_clicked', { section: el.getAttribute('href') });
     });
   });
 
   // Hero secondary CTA
-  const heroSee = document.querySelector('.hero__ctas a[href="#programming"]');
+  const heroSee = document.querySelector('.ott-hero__ctas a[href="#programming"]');
   if (heroSee) {
     heroSee.addEventListener('click', () => track('hero_see_programming_clicked'));
   }
