@@ -962,6 +962,67 @@ button { font: inherit; }
   .vendor-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Logo tile (partner logos, not photos) */
+.vendor__logo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 28px;
+}
+.vendor__logo img {
+  max-width: 78%;
+  max-height: 96px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ============ WEEKEND BUNDLE ============ */
+.bundle-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+.bundle-item {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 26px 24px 24px;
+}
+.bundle-item__num {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.bundle-item__title {
+  font-family: var(--display);
+  font-size: clamp(18px, 2vw, 22px);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+.bundle-item__sub {
+  margin: 0;
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+@media (min-width: 720px) {
+  .bundle-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 /* ============ PARTNERS (legacy marquee) ============ */
 .partners-subhead {
   font-family: var(--display);
