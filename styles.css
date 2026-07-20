@@ -641,8 +641,13 @@ button { font: inherit; }
 .rail__track > .card--rail {
   flex: 0 0 320px;
   scroll-snap-align: start;
-  align-self: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
 }
+/* Keep the photo bucket a fixed 1:1 square; let the body absorb extra height */
+.rail__track > .card--rail .card__img { flex: 0 0 auto; }
+.rail__track > .card--rail .card__body { flex: 1 1 auto; }
 @media (max-width: 720px) {
   .rail__track > .card--rail { flex: 0 0 260px; }
 }
