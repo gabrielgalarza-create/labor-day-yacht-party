@@ -12,42 +12,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <style>
-  body { background: var(--black); }
-  .ros-page { padding: 96px 0 80px; }
-  .ros-back {
+  .ott-page { background: var(--black); }
+  .ott-ros-page { padding: 96px 0 80px; }
+  .ott-ros-back {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: var(--display); font-size: 12px; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--yellow); text-decoration: none;
     margin-bottom: 28px;
   }
-  .ros-back:hover { opacity: 0.8; }
-  .ros-page .h2 { color: var(--white); margin-bottom: 14px; }
-  .ros-meta {
+  .ott-ros-back:hover { opacity: 0.8; }
+  .ott-ros-page .ott-h2 { color: var(--white); margin-bottom: 14px; }
+  .ott-ros-meta {
     color: rgba(255,255,255,.65); font-size: 14px; margin: 0 0 36px;
     letter-spacing: 0.06em; text-transform: uppercase;
   }
 </style>
 </head>
 <body>
+<div class="ott-page">
 
-<section class="ros-page">
-  <div class="container">
-    <a href="index.html" class="ros-back">← Back to the Yacht Party</a>
-    <span class="kicker kicker--yellow">Run of show</span>
-    <h2 class="h2 h2--light">A night designed to flow.</h2>
-    <p class="ros-meta">Saturday, September 5, 2026 · Pier 3, San Francisco · Boarding 6 PM, cruise 7 &ndash; 10 PM</p>
+<section class="ott-ros-page">
+  <div class="ott-container">
+    <a href="index.html" class="ott-ros-back">← Back to the Yacht Party</a>
+    <span class="ott-kicker ott-kicker--yellow">Run of show</span>
+    <h2 class="ott-h2 ott-h2--light">A night designed to flow.</h2>
+    <p class="ott-ros-meta">Saturday, September 5, 2026 · Pier 3, San Francisco · Boarding 6 PM, cruise 7 &ndash; 10 PM</p>
 
-    <ol class="schedule">
-      <li><span class="schedule__time">6:00 PM</span><span class="schedule__title">Doors &amp; pre-boarding reception</span><span class="schedule__sub">Dockside DJ set at Pier 3 with W San Francisco</span></li>
-      <li><span class="schedule__time">6:45 PM</span><span class="schedule__title">Final boarding call</span><span class="schedule__sub">Members board first · all guests aboard</span></li>
-      <li><span class="schedule__time">7:00 PM</span><span class="schedule__title">Yacht departs</span><span class="schedule__sub">Three hours on the Bay begin</span></li>
-      <li><span class="schedule__time">7:30 PM</span><span class="schedule__title">DJ sets &amp; bites onboard</span><span class="schedule__sub">Hip Hop, R&amp;B, Latin, Afrobeats, Dance Hall</span></li>
-      <li><span class="schedule__time">8:30 PM</span><span class="schedule__title">Sunset on the water</span><span class="schedule__sub">Peak set, skyline, open decks</span></li>
-      <li><span class="schedule__time">9:45 PM</span><span class="schedule__title">Final set</span><span class="schedule__sub">Last call at the onboard bar</span></li>
-      <li><span class="schedule__time">10:00 PM</span><span class="schedule__title">Return to dock</span><span class="schedule__sub">Thanks for 8 years with Over The Top</span></li>
+    <ol class="ott-schedule">
+      <li><span class="ott-schedule__time">6:00 PM</span><span class="ott-schedule__title">Doors &amp; pre-boarding reception</span><span class="ott-schedule__sub">Dockside DJ set at Pier 3 with W San Francisco</span></li>
+      <li><span class="ott-schedule__time">6:45 PM</span><span class="ott-schedule__title">Final boarding call</span><span class="ott-schedule__sub">Members board first · all guests aboard</span></li>
+      <li><span class="ott-schedule__time">7:00 PM</span><span class="ott-schedule__title">Yacht departs</span><span class="ott-schedule__sub">Three hours on the Bay begin</span></li>
+      <li><span class="ott-schedule__time">7:30 PM</span><span class="ott-schedule__title">DJ sets &amp; bites onboard</span><span class="ott-schedule__sub">Hip Hop, R&amp;B, Latin, Afrobeats, Dance Hall</span></li>
+      <li><span class="ott-schedule__time">8:30 PM</span><span class="ott-schedule__title">Sunset on the water</span><span class="ott-schedule__sub">Peak set, skyline, open decks</span></li>
+      <li><span class="ott-schedule__time">9:45 PM</span><span class="ott-schedule__title">Final set</span><span class="ott-schedule__sub">Last call at the onboard bar</span></li>
+      <li><span class="ott-schedule__time">10:00 PM</span><span class="ott-schedule__title">Return to dock</span><span class="ott-schedule__sub">Thanks for 8 years with Over The Top</span></li>
     </ol>
   </div>
 </section>
 
+</div>
 </body>
 </html>
