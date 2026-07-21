@@ -1547,3 +1547,21 @@ body.ott-is-rsvp-open { overflow: hidden; }
   cursor: pointer;
   z-index: 2;
 }
+
+/* ============ EMBED HARDENING ============
+   When this page is pasted into a host site (Webflow), the host's
+   element-level and compound typography rules (p, a, h2, .section a)
+   can outrank our single-class rules. These .ott-page-scoped rules
+   restore the design with higher specificity. Values mirror the
+   design system above; !important guards the CTA text colors. */
+.ott-page p, .ott-page li, .ott-page span, .ott-page div { font-family: inherit; }
+.ott-page p { color: inherit; }
+.ott-page a, .ott-page a:visited { color: inherit; font-family: inherit; }
+.ott-page h1, .ott-page h2, .ott-page h3, .ott-page h4 { font-family: var(--display); }
+.ott-page .ott-h2 { color: var(--ink); }
+.ott-page .ott-h2--light, .ott-page .ott-band--dark .ott-h2 { color: var(--white); }
+.ott-page .ott-btn, .ott-page .ott-btn:visited, .ott-page .ott-btn:hover { text-decoration: none; }
+.ott-page .ott-btn--yellow, .ott-page .ott-btn--yellow:visited, .ott-page .ott-btn--yellow:hover { color: var(--black) !important; }
+.ott-page .ott-btn--black, .ott-page .ott-btn--black:visited, .ott-page .ott-btn--black:hover { color: var(--white) !important; }
+.ott-page .ott-btn--ghost, .ott-page .ott-btn--ghost:visited, .ott-page .ott-btn--ghost:hover { color: var(--white) !important; }
+.ott-page .ott-btn--ghost-dark, .ott-page .ott-btn--ghost-dark:visited, .ott-page .ott-btn--ghost-dark:hover { color: var(--black) !important; }
