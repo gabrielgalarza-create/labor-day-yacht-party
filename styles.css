@@ -1565,3 +1565,4 @@ body.ott-is-rsvp-open { overflow: hidden; }
 .ott-page .ott-btn--black, .ott-page .ott-btn--black:visited, .ott-page .ott-btn--black:hover { color: var(--white) !important; }
 .ott-page .ott-btn--ghost, .ott-page .ott-btn--ghost:visited, .ott-page .ott-btn--ghost:hover { color: var(--white) !important; }
 .ott-page .ott-btn--ghost-dark, .ott-page .ott-btn--ghost-dark:visited, .ott-page .ott-btn--ghost-dark:hover { color: var(--black) !important; }
+.ott-page a:not(.ott-btn), .ott-page p a { text-transform: none; }
